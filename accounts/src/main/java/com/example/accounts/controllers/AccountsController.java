@@ -6,13 +6,17 @@ import com.example.accounts.service.IAccountsService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+/*
+@Tag(
+        name = "CRUD REST APIs for Account Microservice",
+        description = "CRUD REST APIs to CREATE, UPDATE, FETCH and DELETE account details"
+)
+ */
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @AllArgsConstructor
@@ -21,12 +25,21 @@ public class AccountsController {
 
     private IAccountsService iAccountsService;
 
+//    @Operation(summary = "Create Account REST API",
+//            description = "REST API to create new Customer & Account inside application"
+//    )
+
+//    @ApiResponse(
+//            responseCode = "201",
+//            description = "HTTP status CREATED"
+//    )
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customerDto){
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));
     }
+
 
     @GetMapping("/fetch")
     public ResponseEntity<CustomerDto> fetchAccountDetails(@RequestParam
