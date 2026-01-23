@@ -1,10 +1,10 @@
-package com.eazybytes.cards.controller;
+package com.example.cards.controller;
 
-import com.eazybytes.cards.constants.CardsConstants;
-import com.eazybytes.cards.dto.CardsDto;
-import com.eazybytes.cards.dto.ErrorResponseDto;
-import com.eazybytes.cards.dto.ResponseDto;
-import com.eazybytes.cards.service.ICardsService;
+import com.example.cards.constants.CardsConstants;
+import com.example.cards.dto.CardsDto;
+import com.example.cards.dto.ErrorResponseDto;
+import com.example.cards.dto.ResponseDto;
+import com.example.cards.service.ICardsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Tag(
-        name = "CRUD REST APIs for Cards in EazyBank",
-        description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH AND DELETE card details"
+        name = "CRUD REST APIs for Cards in application",
+        description = "CRUD REST APIs to CREATE, UPDATE, FETCH AND DELETE card details"
 )
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @AllArgsConstructor

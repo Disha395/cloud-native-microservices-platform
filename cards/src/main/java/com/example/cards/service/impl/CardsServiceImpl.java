@@ -1,13 +1,13 @@
-package com.eazybytes.cards.service.impl;
+package com.example.cards.service.impl;
 
-import com.eazybytes.cards.constants.CardsConstants;
-import com.eazybytes.cards.dto.CardsDto;
-import com.eazybytes.cards.entity.Cards;
-import com.eazybytes.cards.exception.CardAlreadyExistsException;
-import com.eazybytes.cards.exception.ResourceNotFoundException;
-import com.eazybytes.cards.mapper.CardsMapper;
-import com.eazybytes.cards.repository.CardsRepository;
-import com.eazybytes.cards.service.ICardsService;
+import com.example.cards.constants.CardsConstants;
+import com.example.cards.dto.CardsDto;
+import com.example.cards.entity.Cards;
+import com.example.cards.exception.CardAlreadyExistsException;
+import com.example.cards.exception.ResourceNotFoundException;
+import com.example.cards.mapper.CardsMapper;
+import com.example.cards.repository.CardsRepository;
+import com.example.cards.service.ICardsService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

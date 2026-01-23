@@ -1,4 +1,4 @@
-package com.eazybytes.cards.entity;
+package com.example.cards.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
