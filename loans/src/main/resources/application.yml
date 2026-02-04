@@ -47,3 +47,9 @@ info:
     name: "loans"
     description: "Loans Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      disha395:
+        loans: DEBUG
